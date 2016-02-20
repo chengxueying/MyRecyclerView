@@ -76,9 +76,6 @@ public class LinearRecyclerActivity extends Activity {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (lastVisibleItem==mFootViewAdapter.getItemCount()){
-//                    mFootViewAdapter.FootViewHolder.item.
-                }
 
                 if (newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 == mFootViewAdapter.getItemCount()) {
                     mFootViewAdapter.changeMoreStatus(FootViewAdapter.LOADING_MORE);
